@@ -1,0 +1,97 @@
+/* 
+    @file style.css
+    @author Mit Bailey (mitbailey99@gmail.com)
+    @brief GUI Assignment 1: Creating Your First Webpage
+    @version 0.1
+    @date 2021.07.07
+    @copyright Copyright (c) 2021
+*/
+
+/* Font Information */
+@font-face {
+    font-family: NewsGothic-Cond; /* Names the font. */
+    src: url(../fonts/News\ Gothic\ BT\ Cond.woff); /* Links to the actual font file. */
+    src: url(../fonts/News\ Gothic\ BT\ Cond.ttf); /* Backups, just in case. */
+    src: url(../fonts/News\ Gothic\ BT\ Cond.svg);
+    src: url(../fonts/News\ Gothic\ BT\ Cond.woff2);
+    src: url(../fonts/News\ Gothic\ BT\ Cond.otf);
+}
+
+@font-face {
+    font-family: NewsGothic-XTCond-Bold; 
+    src: url(../fonts/News\ Gothic\ BT\ Std\ Extra\ Condensed\ Bold.woff);
+    src: url(../fonts/News\ Gothic\ BT\ Std\ Extra\ Condensed\ Bold.ttf);
+    src: url(../fonts/News\ Gothic\ BT\ Std\ Extra\ Condensed\ Bold.svg);
+    src: url(../fonts/News\ Gothic\ BT\ Std\ Extra\ Condensed\ Bold.woff2);
+    src: url(../fonts/News\ Gothic\ BT\ Std\ Extra\ Condensed\ Bold.otf);
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(../fonts/OpenSans-Regular.ttf); /* Couldn't find other types for this one! */
+}
+
+/* Formatting for the body of the page. */
+body {
+    background-color: lightslategray; /* Changes the background color of this section. */
+    margin: 0px; /* Ensures that things placed within it can abutt the edge... was a pain trying to figure this out. */
+}
+
+/* Formatting for the large headers. */
+h1 {
+    color:black;
+}
+
+/* Formatting for links. */
+a {
+    color: blue;
+}
+
+/* Formatting for the site's side-bar navigation. */
+.site_side_navigation {
+    height: 100%; /* Extends this section the height of the screen. */
+    background-color: white;
+    width: 250px; /* Defines a constant width. */
+    /* Defines the typeface. TODO: Might get better ones later. */
+    /* font-family: OpenSans; */
+    font-size: 13pt;
+    position: fixed; /* Forces a constant position on-screen. */
+    top: 0px; /* Ensures there is no space left at the top. */
+}
+
+/* Formatting for links in the side bar. */
+.site_side_navigation a {
+    color: black;
+    margin-left: 50px;
+    font-family: OpenSans;
+    text-decoration-line: none; /* Remove the links' underlines. */
+}
+
+/* Formatting for the side bar's title. */
+.site_side_navigation h2 {
+    color: black;
+    justify-self: center;
+    margin-left: 50px;
+    font-family: NewsGothic-Cond;
+    font-weight: normal; /* This font actually only supports two variations, lighter-normal and bold-bolder. */
+    font-size: 22pt;
+}
+
+/* By making a main page class we can push everything over a bit, to account for the side bar. */
+.page_main {
+    margin-left: 300px;
+    font-family: OpenSans;
+}
+
+/* Footer class formatting. */
+footer {
+    position: fixed; /* To make it at the *actual* bottom of the page, it must be fixed. */
+    margin-left: 300px; /* Push it over to account for the navbar. */
+    justify-self: right; /* Redundant but whatever. */
+    bottom: 25px; /* Lift slightly off bottom. */
+    right: 100px; /* Push off of the right. */
+    font-family: NewsGothic-Cond; /* Set the typeface. */
+    font-weight: normal;
+    
+    font-size: 10pt; /* Set the font. */
+}
