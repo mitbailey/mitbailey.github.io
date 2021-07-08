@@ -49,6 +49,7 @@ a {
 
 /* Formatting for the site's side-bar navigation. */
 .site_side_navigation {
+    z-index: 10; /* This will bring the bar to the front. */
     height: 100%; /* Extends this section the height of the screen. */
     background-color: white;
     width: 250px; /* Defines a constant width. */
@@ -83,15 +84,26 @@ a {
     font-family: OpenSans;
 }
 
-/* Footer class formatting. */
+/* Footer general formatting. */
 footer {
-    position: fixed; /* To make it at the *actual* bottom of the page, it must be fixed. */
-    margin-left: 300px; /* Push it over to account for the navbar. */
-    justify-self: right; /* Redundant but whatever. */
-    bottom: 25px; /* Lift slightly off bottom. */
-    right: 100px; /* Push off of the right. */
+    position: absolute; /* To make it at the *actual* bottom of the page, it must be fixed. */
+    bottom: 0px;
+    right: 0px;
+    text-align: right;
     font-family: NewsGothic-Cond; /* Set the typeface. */
     font-weight: normal;
-    
+    width: 100%;
+    /* background-color: green; */
     font-size: 10pt; /* Set the font. */
+}
+
+/* Validation footer formatting. */
+.validation {
+    text-align: center;
+}
+
+/* Copyright footer formatting. */
+.copyright {
+    margin-right: 90px;
+    margin-bottom: 30px;
 }
