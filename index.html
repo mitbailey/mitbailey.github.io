@@ -1,0 +1,66 @@
+<!-- 
+    @file index.html
+    @author Mit Bailey (mitbailey99@gmail.com)
+    @brief GUI Assignment 1: Creating Your First Webpage
+    @version 0.1
+    @date 2021.07.07
+
+    @copyright Copyright (c) 2021
+ -->
+
+<!-- Basic code block borrowed from: https://www.sitepoint.com/a-minimal-html-document-html5-edition/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Boilerplate Information -->
+<head>
+    <meta charset="utf-8">
+    <title>mitbailey.com</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="src/script.js"></script>
+</head>
+
+<!-- Page Content -->
+<body>
+
+    <!-- The site's title, as part of the site_side_navigation. -->
+    <!-- Defining and id and class allows us to change the style of just this block as well as the entire navigation column. -->
+    <!-- Actually, we don't need IDs unless there are a lot of some type (ie h2) within the same class. -->
+    <!-- We can just access the main title via .site_side_navigation a in CSS. -->
+    <div class = "site_side_navigation">
+        <br><h2 id = "main_title">mitbailey.com</h2><br><br>
+            <!-- The side navigation bar's links. -->
+            <a href="index.html">Home</a><br><br>
+            <a href="pages/gravity_simulator.html">Gravity Simulator</a><br><br>
+            <a href="pages/project_spaceship.html">Project Spaceship</a><br><br>
+            <a href="pages/project_paradigm.html">Project Paradigm</a><br><br>
+            <a href="pages/misc_projects.html">Misc. Projects</a><br><br>
+            <a href="pages/about_me.html">About Me</a><br><br>
+    </div>
+
+    <div class="page_main">
+        <div class="section1">
+            <p>This is a paragraph.</p>
+            <code>This is some code.</code>
+        </div>
+
+        <div class="section2">
+            <button>This is a button?</button>
+        </div>
+
+        <div id="special_section">
+            <code>
+                This is a lot of code. Maybe too much honestly, but who knows!<br>
+                Next line!<br>
+                Another!
+            </code>
+        </div>
+    </div>
+</body>
+
+<footer>
+    Mit Bailey Copyright (c) 2021
+</footer>
+
+</html>
