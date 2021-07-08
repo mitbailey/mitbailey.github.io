@@ -69,7 +69,7 @@ a {
 }
 
 /* Formatting for the side bar's title. */
-.site_side_navigation h2 {
+.site_side_navigation h1 {
     color: black;
     justify-self: center;
     margin-left: 50px;
