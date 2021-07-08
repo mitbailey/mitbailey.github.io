@@ -8,3 +8,13 @@
     @copyright Copyright (c) 2021
 */
 
+/* Formatting for the body of the page. */
+body {
+    background-color: bisque;
+}
+
+/* Formatting for the header-1 */
+h1 {
+    color:black;
+    margin-left: 100px;
+}
