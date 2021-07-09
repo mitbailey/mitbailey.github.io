@@ -97,9 +97,15 @@ footer {
     font-size: 10pt; /* Set the font. */
 }
 
-/* Validation footer formatting. */
+/* Validation footer formatting (contains CSS / HTML images). */
 .validation {
     text-align: center;
+    margin-left: 0px;
+}
+
+.validation a {
+    text-align: center;
+    margin-left: 0px;
 }
 
 /* Copyright footer formatting. */
