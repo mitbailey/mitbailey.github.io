@@ -18,6 +18,7 @@
 <head>
     <meta charset="utf-8">
     <title>mitbailey.com</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
     <script src="src/script.js"></script>
 </head>
@@ -44,15 +45,11 @@
             <p class = validation>
                 <!-- CSS Validation Icon -->
                 <a href="https://jigsaw.w3.org/css-validator/check/referer">
-                    <img style="border:0;width:88px;height:31px"
-                        src="images/vcss-blue.gif"
-                        alt="Valid CSS!" />
+                    <img src="images/vcss-blue.gif" alt="Valid CSS!"/>
                 </a>
                 <!-- HTML5 Validation Icon -->
                 <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmitbailey.github.io%2F">
-                    <img style="border:0;width:88px;height:31px"
-                        src="images/html5-validator-badge-blue.png"
-                        alt="Valid HTML!" />
+                    <img src="images/html5-validator-badge-blue.png" alt="Valid HTML!"/>
                 </a>
             </p>
         </footer>
@@ -61,9 +58,19 @@
     <!-- The main page's 'body,' where most of the content will go. -->
     <div class="page_main">
         <!-- Trying out different types of text here. -->
-        <div class="section1">
-            <p>This is a paragraph.</p>
-            <code>This is some code.</code>
+        <div class="written_section">
+            <p>Welcome to my personal programming projects website. Here you will find downloads and links to an assortment of projects I've created that may be found interesting or useful.</p>
+            <p>This website is written in HTML/CSS and the code can be found in my <a href = "https://github.com/mitbailey/mitbailey.github.io">mitbailey.github.io repository</a>.</p>
+            <p>Projects not hosted on this website directly can be found either on my GitHub or itch.io pages.</p>
+        </div>
+
+        <div class="image_holder_center" id = "external_link_images">
+            <a href="https://github.com/mitbailey">
+                <img src = "images/GitHub_Logo.png" alt = "GitHub"/>
+            </a>
+            <a href="https://github.com/mitbailey">
+                <img src = "images/itchio-logo-black.png" alt = "itch.io"/>
+            </a>
         </div>
 
         <!-- Trying out a button in a new section. -->
@@ -84,7 +91,7 @@
 
     <!-- The footer, which contains copyright information. -->
     <footer>
-        <p class = copyright>
+        <p class = "copyright">
             Mit Bailey Copyright (c) 2021 
         </p>
     </footer>

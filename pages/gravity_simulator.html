@@ -18,6 +18,7 @@
 <head>
     <meta charset="utf-8">
     <title>mitbailey.com</title>
+    <link rel="shortcut icon" href="../images/favicon.ico">
     <link rel="stylesheet" href="../css/style.css">
     <script src="../src/script.js"></script>
 </head>
@@ -44,15 +45,11 @@
             <p class = validation>
                 <!-- CSS Validation Icon -->
                 <a href="https://jigsaw.w3.org/css-validator/check/referer">
-                    <img style="border:0;width:88px;height:31px"
-                        src="../images/vcss-blue.gif"
-                        alt="Valid CSS!" />
+                    <img src="../images/vcss-blue.gif" alt="Valid CSS!" />
                 </a>
                 <!-- HTML5 Validation Icon -->
-                <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmitbailey.github.io%2F">
-                    <img style="border:0;width:88px;height:31px"
-                        src="../images/html5-validator-badge-blue.png"
-                        alt="Valid HTML!" />
+                <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmitbailey.github.io/pages/gravity_simulator.html">
+                    <img src="../images/html5-validator-badge-blue.png" alt="Valid HTML!" />
                 </a>
             </p>
         </footer>
@@ -60,7 +57,13 @@
 
     <!-- The main page's 'body,' where most of the content will go. -->
     <div class="page_main">
-
+        <div class = "image_holder_center" id = "n-body_banner">
+            <img src = "../images/n-body_banner.png" alt = "n-body Gravity Simulator" />
+        </div>
+        <div class="written_section">
+            <p>This n-body gravity simulator is a project I released on 14 May 2020. It uses a simple algorithm which utilizes Newton's Law of Universal Gravitation, calculating and applying the force between every object. While this method results in an inefficient n(n-1) time complexity, it also presents the most accurate result. Algorithms that would run the simulation faster, such as Barnes-Hut, use approximations which decrease the accuracy of the simulation.</p>
+            <p>The simulator uses a gravitational constant of 0.06674 and a particle diameter equal to the eighth root of the mass.</p>
+        </div>
     </div>
 
     <!-- The footer, which contains copyright information. -->

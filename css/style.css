@@ -42,9 +42,9 @@ h1 {
     color:black;
 }
 
-/* Formatting for links. */
+/* Global formatting for links. */
 a {
-    color: blue;
+    color: black;
 }
 
 /* Formatting for the site's side-bar navigation. */
@@ -80,9 +80,23 @@ a {
 
 /* By making a main page class we can push everything over a bit, to account for the side bar. */
 .page_main {
-    margin-left: 300px;
+    /* Margin: Interior boundary. */
+    /* Padding: Exterior boundary. */
+
+    position: relative; /* Allows offset relative to where it would have been. */
+    /* margin-left: 500px; */
+    /* padding-left: 25vw; */
+    /* margin-left: 25vw; */
+    
+    width: calc(80% - 250px); /* 80% = 100% - margin%s */
+    left: 250px; /* Pushed from the left an amount of pixels equal to the navbar's width. */
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
+
     font-family: OpenSans;
 }
+
 
 /* Footer general formatting. */
 footer {
@@ -103,13 +117,50 @@ footer {
     margin-left: 0px;
 }
 
+/* Set the formatting for links within the validation class, aka the CSS / HTML checker images. */
 .validation a {
     text-align: center;
     margin-left: 0px;
 }
 
+/* Set the formatting for the CSS / HTML checker images. */
+.validation img {
+    border: 0;
+    width: 88px;
+    height: 31px;
+}
+
+/* TODO: Doesn't stick to the bottom of the screen. */
 /* Copyright footer formatting. */
 .copyright {
     margin-right: 90px;
     margin-bottom: 30px;
+}
+
+/* General /div class for holding center-justified images. */
+.image_holder_center {
+    text-align: center;
+}
+
+/* General /div class for holding left-justified images. */
+.image_holder_left {
+    text-align: left;
+}
+
+/* General /div class for holding right-justified images. */
+.image_holder_right {
+    text-align: right;
+}   
+
+/* Styling for the image within the n-body banner on the gravity sim page. */
+#n-body_banner img {
+    width: calc(80%); /* Similar to .page_main */
+} 
+
+/* TODO: Get these images working correctly. */
+/* Set the formatting for the external links images on the main page (ie GitHub, itch.io). */
+#external_link_images img {
+    margin: 25px;
+    border: 0;
+    height: 50px;
 }
