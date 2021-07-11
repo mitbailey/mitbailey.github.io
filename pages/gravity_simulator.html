@@ -28,7 +28,7 @@
 <body>
 
     <!-- The site's title, as part of the site_side_navigation class. -->
-    <div class="site_side_navigation">
+    <div class="navbar">
         <br>
         <h1 id="main_title">mitbailey.com</h1><br><br>
         <!-- The side navigation bar's links. -->
@@ -38,40 +38,104 @@
         <a href="project_paradigm.html">Project Paradigm</a><br><br>
         <a href="misc_projects.html">Misc. Projects</a><br><br>
         <a href="about_me.html">About Me</a><br><br>
-        <footer class = validation_footer>
-            <!-- This paragraph from: https://jigsaw.w3.org/css-validator -->
-            <!-- HTML5 validation logo from: https://github.com/bradleytaunt/html5-valid-badge -->
-            <!-- W3C doesn't actually offer one anymore. -->
-            <p class = validation>
-                <!-- CSS Validation Icon -->
+        <div class="footer" id="validation">
+            <p>
+                <!-- W3C's CSS Validation Icon -->
                 <a href="https://jigsaw.w3.org/css-validator/check/referer">
                     <img src="../images/vcss-blue.gif" alt="Valid CSS!" />
                 </a>
-                <!-- HTML5 Validation Icon -->
-                <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmitbailey.github.io/pages/gravity_simulator.html">
+                <!-- HTML5 validation logo, from: https://github.com/bradleytaunt/html5-valid-badge since W3C doesn't offer one for HTML5. -->
+                <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmitbailey.github.io%2Fpages%2Fgravity_simulator.html">
                     <img src="../images/html5-validator-badge-blue.png" alt="Valid HTML!" />
                 </a>
             </p>
-        </footer>
+        </div>
     </div>
 
     <!-- The main page's 'body,' where most of the content will go. -->
     <div class="page_main">
-        <div class = "image_holder_center" id = "n-body_banner">
-            <img src = "../images/n-body_banner.png" alt = "n-body Gravity Simulator" />
+        <div class="image_holder_center" id="n-body_banner">
+            <a href=https://mitbailey.itch.io/n-body-gravity-simulator><img src="../images/n-body_banner.png"
+                    alt="n-body Gravity Simulator" /></a>
         </div>
         <div class="written_section">
-            <p>This n-body gravity simulator is a project I released on 14 May 2020. It uses a simple algorithm which utilizes Newton's Law of Universal Gravitation, calculating and applying the force between every object. While this method results in an inefficient n(n-1) time complexity, it also presents the most accurate result. Algorithms that would run the simulation faster, such as Barnes-Hut, use approximations which decrease the accuracy of the simulation.</p>
-            <p>The simulator uses a gravitational constant of 0.06674 and a particle diameter equal to the eighth root of the mass.</p>
+            <p>This n-body gravity simulator is a project I released on 14 May 2020. It uses a simple algorithm which
+                utilizes Newton's Law of Universal Gravitation, calculating and applying the force between every object.
+                While this method results in an inefficient n(n-1) time complexity, it also presents the most accurate
+                result. Algorithms that would run the simulation faster, such as Barnes-Hut, use approximations which
+                decrease the accuracy of the simulation.</p>
+            <p>The simulator uses a gravitational constant of 0.06674 and a particle diameter equal to the eighth root
+                of the mass.</p>
+            <p>Click on the banner image or the following link to view this program's itch.io page: <a
+                    href="https://mitbailey.itch.io/n-body-gravity-simulator">n-Body Gravity Simulator</a></p>
+        </div>
+        <div class="written_section">
+            <h3>Features</h3>
+            <ul>
+                <li><i><b>Compute Shaders</b></i>. The use of compute shaders enables the simulation to handle over
+                    5,000 simultaneous particles in the scene. Performance is best when no particles are in direct
+                    contact, and many times more particles can be handled when this is the case. The compute shaders
+                    currently use a brute force <i>O(n^2)</i> time complexity algorithm (<a
+                        href="https://en.wikipedia.org/wiki/Time_complexity"><i>what is O(n^2)?</i></a>). This brute
+                    force approach is the most accurate, but also the most resource intensive. However, even with this
+                    naïve approach, the FPS-bottleneck is particle contact interactions, not gravitational force
+                    calculations.</li>
+            </ul>
+            <ul>
+                <li><i><b>User Interface</b></i>. The user interface features a total particle count and mass readouts,
+                    as well as separate sections for adjusting settings related to spawning particles via the <i>Click
+                        'N' Drag</i> and <i>Spawn Field</i> methods.</li>
+            </ul>
+            <ul>
+                <li><i><b>Object Types</b></i>. By using the drop-down menu, it is possible to select pre-made
+                    conglomerations of particles to spawn. These only work with the <i>Click 'N' Drag</i> method. Be
+                    careful, some object types only work properly within certain mass constraints.</li>
+            </ul>
+            <ul>
+                <li><i><b>Custom Spawn Fields</b></i>. It is possible to customize the number of particles, their range
+                    of masses, and the range of speeds of those particles within a spawn field prior to spawning.
+                    <i>Note: Particles are assigned a random value from </i><code>-SPEED</code><i> to
+                    </i><code>SPEED</code><i> in both their X and Y velocity vector components. This results in an
+                        actual velocity magnitude of </i><code>±SPEED√(2)</code><i> (<a
+                            href="https://en.wikipedia.org/wiki/Magnitude_(mathematics)#Vector_spaces">more on vector
+                            magnitude</a>).</i>
+                </li>
+            </ul>
+            <ul>
+                <li><i><b>Speed of Light</b></i>. With the defining of a finite speed of light comes a plethora of
+                    potential strange near-speed-of-light interactions and behaviors. Currently, however, the only
+                    effect is the existence of the <a
+                        href=https://en.wikipedia.org/wiki/Schwarzschild_radius>Schwarzschild Radius</a></i>. This means
+                    that once a particle exceeds a certain mass, it will be spawned as a black hole. <i>Note: It is also
+                        possible to force the spawning of a black hole of any mass via the object types drop-down
+                        menu.</i></li>
+            </ul>
+            <ul>
+                <li><i><b>Barnes-Hut Algorithm</b></i>. This algorithm treats groups of far-away particles as a single
+                    body, reducing the time complexity of computations from a brute force <i>O(n^2)</i> to
+                    <i>O(nlogn)</i> (<i><a
+                            href="https://stackoverflow.com/questions/23329234/which-is-better-on-log-n-or-on2">more on
+                            time complexities</a></i>). This algorithm is <i>not</i> used by default in the simulator at
+                    this time.
+                </li>
+            </ul>
+            <ul>
+                <li><i><b>Toggleable Computational Modes</b></i>. Computation can be toggled between Compute Shaders
+                    Mode and CPU Mode (Compute Shaders Mode by default). While in CPU Mode, the Barnes-Hut algorithm can
+                    be toggled (off by default).</li>
+            </ul>
+            <p></p>
+        </div>
+        <div class="image_holder_center">
+
         </div>
     </div>
 
     <!-- The footer, which contains copyright information. -->
-    <footer>
-        <p class = copyright>
-            Mit Bailey Copyright (c) 2021 
-        </p>
-    </footer>
+    <!-- TODO: class of footer, with ids of copyright, validation, etc. -->
+    <div class="footer" id="copyright">
+        Mit Bailey Copyright (c) 2021
+    </div>
 </body>
 
 

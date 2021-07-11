@@ -28,7 +28,7 @@
 <body>
 
     <!-- The site's title, as part of the site_side_navigation class. -->
-    <div class="site_side_navigation">
+    <div class="navbar">
         <br>
         <h1 id="main_title">mitbailey.com</h1><br><br>
         <!-- The side navigation bar's links. -->
@@ -38,35 +38,34 @@
         <a href="pages/project_paradigm.html">Project Paradigm</a><br><br>
         <a href="pages/misc_projects.html">Misc. Projects</a><br><br>
         <a href="pages/about_me.html">About Me</a><br><br>
-        <footer class = validation_footer>
-            <!-- This paragraph from: https://jigsaw.w3.org/css-validator -->
-            <!-- HTML5 validation logo from: https://github.com/bradleytaunt/html5-valid-badge -->
-            <!-- W3C doesn't actually offer one anymore. -->
-            <p class = validation>
+        <div class="footer" id="validation">
+            <p>
                 <!-- CSS Validation Icon -->
                 <a href="https://jigsaw.w3.org/css-validator/check/referer">
-                    <img src="images/vcss-blue.gif" alt="Valid CSS!"/>
+                    <img src="images/vcss-blue.gif" alt="Valid CSS!" />
                 </a>
                 <!-- HTML5 Validation Icon -->
                 <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmitbailey.github.io%2F">
-                    <img src="images/html5-validator-badge-blue.png" alt="Valid HTML!"/>
+                    <img src="images/html5-validator-badge-blue.png" alt="Valid HTML!" />
                 </a>
             </p>
-        </footer>
+        </div>
     </div>
 
     <!-- The main page's 'body,' where most of the content will go. -->
     <div class="page_main">
         <!-- Trying out different types of text here. -->
         <div class="written_section">
-            <p>Welcome to my personal programming projects website. Here you will find downloads and links to an assortment of projects I've created that may be found interesting or useful.</p>
-            <p>This website is written in HTML/CSS and the code can be found in my <a href = "https://github.com/mitbailey/mitbailey.github.io">mitbailey.github.io repository</a>.</p>
+            <p>Welcome to my personal programming projects website. Here you will find downloads and links to an
+                assortment of projects I've created that may be found interesting or useful.</p>
+            <p>This website is itself a programming project and is written in HTML/CSS. The code can be found in my <a
+                    href="https://github.com/mitbailey/mitbailey.github.io">mitbailey.github.io repository</a>.</p>
             <p>Projects not hosted on this website directly can be found either on my GitHub or itch.io pages.</p>
         </div>
 
-        <div class="image_holder_center" id = "external_link_images">
-            <a href="https://github.com/mitbailey"><img src = "images/GitHub_Logo.png" alt = "GitHub"/></a>
-            <a href="https://mitbailey.itch.io/"><img src = "images/itchio-logo-black.png" alt = "itch.io"/></a>
+        <div class="image_holder_center" id="external_link_images">
+            <a href="https://github.com/mitbailey"><img src="images/GitHub_Logo.png" alt="GitHub" /></a>
+            <a href="https://mitbailey.itch.io/"><img src="images/itchio-logo-black.png" alt="itch.io" /></a>
         </div>
 
         <!-- Trying out a button in a new section. -->
@@ -86,11 +85,9 @@
     </div>
 
     <!-- The footer, which contains copyright information. -->
-    <footer>
-        <p class = "copyright">
-            Mit Bailey Copyright (c) 2021 
-        </p>
-    </footer>
+    <div class="footer" id="copyright">
+        Mit Bailey Copyright (c) 2021
+    </div>
 </body>
 
 
