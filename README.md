@@ -1,3 +1,1 @@
 # mitbailey.github.io
-
-.

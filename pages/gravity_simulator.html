@@ -5,6 +5,8 @@
     @version 0.1
     @date 2021.07.07
 
+    This page displays information relating to my Gravity Simulator.
+
     @copyright Copyright (c) 2021
  -->
 
@@ -27,10 +29,13 @@
 
 <body>
 
-    <!-- The site's title, as part of the site_side_navigation class. -->
+    <!-- This is the site's side navigation bar (navbar). It is always present on the left side of the screen and provides links to all other pages on the site. -->
     <div class="navbar">
         <br>
+
+        <!-- The site's title, as part of the site_side_navigation class. -->
         <h1 id="main_title">mitbailey.com</h1><br><br>
+
         <!-- The side navigation bar's links. -->
         <a href="../index.html">Home</a><br><br>
         <a href="gravity_simulator.html">Gravity Simulator</a><br><br>
@@ -38,6 +43,8 @@
         <a href="project_paradigm.html">Project Paradigm</a><br><br>
         <a href="misc_projects.html">Misc. Projects</a><br><br>
         <a href="about_me.html">About Me</a><br><br>
+
+        <!-- The footer of the navbar, contains the W3C validation image links. -->
         <div class="footer" id="validation">
             <p>
                 <!-- W3C's CSS Validation Icon -->
@@ -55,10 +62,16 @@
 
     <!-- The main page's 'body,' where most of the content will go. -->
     <div class="page_main">
+
+        <!-- image_holder_center is a class designed to hold images center-justified. See style.css for more information. -->
+        <!-- This image holder is displaying the banner for the n-body Gravity Simulator. -->
         <div class="image_holder_center" id="banner">
             <a href=https://mitbailey.itch.io/n-body-gravity-simulator><img src="../images/n-body_banner.png"
                     alt="n-body Gravity Simulator" /></a>
         </div>
+
+        <!-- written_section is a class designed to hold text, tables, and other items within the page_main -->
+        <!-- This section is a summary of the n-body Gravity Simulator. -->
         <div class="written_section">
             <p>This n-body gravity simulator is a project I released on 14 May 2020. It allows the user to spawn
                 particles with mass and velocity and uses a simple algorithm which implements Newton's Law of Universal
@@ -71,6 +84,8 @@
             <p>Click on the banner image or the following link to view this program's itch.io page: <a
                     href="https://mitbailey.itch.io/n-body-gravity-simulator">n-Body Gravity Simulator</a></p>
         </div>
+
+        <!-- This section lists the features of the simulator as an unordered list. -->
         <div class="written_section">
             <h3>Features</h3>
             <ul>
@@ -107,7 +122,7 @@
                 <li><i><b>Speed of Light</b></i>. With the defining of a finite speed of light comes a plethora of
                     potential strange near-speed-of-light interactions and behaviors. Currently, however, the only
                     effect is the existence of the <i><a
-                        href="https://en.wikipedia.org/wiki/Schwarzschild_radius">Schwarzschild Radius</a></i>. This
+                            href="https://en.wikipedia.org/wiki/Schwarzschild_radius">Schwarzschild Radius</a></i>. This
                     means
                     that once a particle exceeds a certain mass, it will be spawned as a black hole. <i>Note: It is also
                         possible to force the spawning of a black hole of any mass via the object types drop-down
@@ -128,6 +143,10 @@
                     be toggled (off by default).</li>
             </ul>
             <p></p>
+        </div>
+
+        <!-- This section lists the controls used in the simulator in a table. -->
+        <div class="written_section">
             <h3>Controls</h3>
             <table>
                 <tr>
@@ -156,15 +175,19 @@
                 </tr>
             </table>
         </div>
+
+        <!-- This section uses another image_holder_center to hold screenshots from the simulator. -->
         <div class="image_holder_center" id="screenshots">
-            <a href="../images/n-body-screen-1.png"><img src="../images/n-body-screen-1.png" alt="Groups of mass-bodies gravitationally clumped together."/></a>
-            <a href="../images/n-body-screen-2.png"><img src="../images/n-body-screen-2.png" alt="Trinary Gravitational System"/></a>
-            <a href="../images/n-body-screen-3.png"><img src="../images/n-body-screen-3.png" alt="Two large mass-bodies orbit one-another."/></a>
+            <a href="../images/n-body-screen-1.png"><img src="../images/n-body-screen-1.png"
+                    alt="Groups of mass-bodies gravitationally clumped together." /></a>
+            <a href="../images/n-body-screen-2.png"><img src="../images/n-body-screen-2.png"
+                    alt="Trinary Gravitational System" /></a>
+            <a href="../images/n-body-screen-3.png"><img src="../images/n-body-screen-3.png"
+                    alt="Two large mass-bodies orbit one-another." /></a>
         </div>
     </div>
 
-    <!-- The footer, which contains copyright information. -->
-    <!-- TODO: class of footer, with ids of copyright, validation, etc. -->
+    <!-- The main site footer, which contains copyright information. -->
     <div class="footer" id="copyright">
         Mit Bailey Copyright (c) 2021
     </div>

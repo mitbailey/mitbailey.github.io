@@ -2,6 +2,9 @@
     @file index.html
     @author Mit Bailey (mitbailey99@gmail.com)
     @brief GUI Assignment 1: Creating Your First Webpage
+
+    This file is also the main "Home" page on the website.
+
     @version 0.1
     @date 2021.07.07
 
@@ -27,10 +30,13 @@
 
 <body>
 
-    <!-- The site's title, as part of the site_side_navigation class. -->
+    <!-- This is the site's side navigation bar (navbar). It is always present on the left side of the screen and provides links to all other pages on the site. -->
     <div class="navbar">
         <br>
+
+        <!-- The site's title, as part of the site_side_navigation class. -->
         <h1 id="main_title">mitbailey.com</h1><br><br>
+        
         <!-- The side navigation bar's links. -->
         <a href="index.html">Home</a><br><br>
         <a href="pages/gravity_simulator.html">Gravity Simulator</a><br><br>
@@ -38,6 +44,8 @@
         <a href="pages/project_paradigm.html">Project Paradigm</a><br><br>
         <a href="pages/misc_projects.html">Misc. Projects</a><br><br>
         <a href="pages/about_me.html">About Me</a><br><br>
+
+        <!-- The footer of the navbar, contains the W3C validation image links. -->
         <div class="footer" id="validation">
             <p>
                 <!-- CSS Validation Icon -->
@@ -54,6 +62,7 @@
 
     <!-- The main page's 'body,' where most of the content will go. -->
     <div class="page_main">
+
         <!-- Trying out different types of text here. -->
         <div class="written_section">
             <p>Welcome to my personal programming projects website. Here you will find downloads and links to an
@@ -63,6 +72,7 @@
             <p>Projects not hosted on this website directly can be found either on my GitHub or itch.io pages.</p>
         </div>
 
+        <!-- image_holder_center is a class designed to hold images center-justified. See style.css for more information. -->
         <div class="image_holder_center" id="external_link_images">
             <a href="https://github.com/mitbailey"><img src="images/GitHub_Logo.png" alt="GitHub" /></a>
             <a href="https://mitbailey.itch.io/"><img src="images/itchio-logo-black.png" alt="itch.io" /></a>
@@ -73,10 +83,10 @@
             <button>This is a button?</button>
         </div>
 
-        <!-- Testing IDs. -->
+        <!-- Testing IDs and the code tag. -->
         <div id="special_section">
             <code>
-                This is a lot of code. Maybe too much honestly, but who knows!<br>
+                This is a lot of code. Probably not enough honestly, but who knows!<br>
                 Next line!<br>
                 Another!
             </code>
@@ -84,7 +94,7 @@
 
     </div>
 
-    <!-- The footer, which contains copyright information. -->
+    <!-- The main site footer, which contains copyright information. -->
     <div class="footer" id="copyright">
         Mit Bailey Copyright (c) 2021
     </div>

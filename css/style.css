@@ -2,6 +2,9 @@
     @file style.css
     @author Mit Bailey (mitbailey99@gmail.com)
     @brief GUI Assignment 1: Creating Your First Webpage
+
+    CSS style file.
+
     @version 0.1
     @date 2021.07.07
     @copyright Copyright (c) 2021
@@ -38,13 +41,14 @@
     src: url(../fonts/OpenSans-Regular.ttf); /* Couldn't find other types for this one! */
 }
 
-/* GLOBALS FORMATTING */
-/* ****************** */
+/* BASE TAG FORMATTING */
+/* ******************* */
+/* Formats the base tag type. Can be overridden or adjusted in subtags. */
 
 /* Formatting for the body of the page. */
 body {
     background-color: lightslategray; /* Changes the background color of this section. */
-    margin: 0px; /* Ensures that things placed within it can abutt the edge... was a pain trying to figure this out. */
+    margin: 0px; /* Ensures that things placed within it can abutt the edge. */
 }
 
 /* Formatting for largest headers, typically just the site name on the navbar. */
@@ -52,24 +56,24 @@ h1 {
     color:black;
 }
 
-/* Global formatting for links. */
+/* Formatting for links. */
 a {
     color: black;
 }
 
-/* Global formatting for tables. */
+/* Formatting for tables. */
 table {
     border: 1px solid black;
     border-spacing: 0px;
 }
 
-/* Global formatting for table headers. */
+/* Formatting for table headers. */
 th {
     border: 1px solid black;
     padding: 5px;
 }
 
-/* Global formatting for table data cells. */
+/* Formatting for table data cells. */
 td {
     border: 1px solid black;
     padding: 5px;
@@ -77,6 +81,7 @@ td {
 
 /* CLASS SPECIFIC FORMATTING */
 /* ************************* */
+/* Adjusts the formatting of specific classes. */
 
 /* Formatting for the site's side-bar navigation. */
 .navbar {
@@ -89,7 +94,7 @@ td {
     top: 0px; /* Ensures there is no space left at the top. */
 }
 
-/* Formatting for links in the side bar, aka the page names. */
+/* Formatting for links in the side bar, aka the page names and links. */
 .navbar a {
     margin-left: 50px;
     font-family: OpenSans;
@@ -106,10 +111,11 @@ td {
 }
 
 /* By making a main page class we can push everything over a bit, to account for the side bar. */
+/* Allows adjusting of the "content" area of our pages, aka the body minus the footer and navbar. */
 .page_main {
     position: relative; /* Allows offset relative to where it would have been. */
     width: calc(80% - 250px); /* 80% = 100% - margin%s */
-    min-height: calc(100vh - 50px - 50px - 50px); /* Sets the minimum height of the main page area to the height of the viewport. This will push the footer down. We subtract the 50 pixels of the top margin, 50 pixels of the bottom margin, and 50 pixels of the footer. */
+    min-height: calc(100vh - 50px - 50px - 50px); /* Sets the minimum height of the main page area to the height of the viewport. This will push the footer down. We subtract the 50 pixels of the top margin, 50 pixels of the bottom margin, and 50 pixels of the footer. Nonsimplified for verbosity. */
     left: 250px; /* Pushed from the left an amount of pixels equal to the navbar's width. */
     margin-left: 10%;
     margin-right: 10%;
@@ -121,7 +127,8 @@ td {
     /* background-color: thistle; */
 }
 
-/* Custom div style footer. */
+/* Custom div style footer, used for the validation images in the navbar and the site's main copyright footer. */
+/* Decided to go with this since the base footer tag was not acting how I wished it would. */
 .footer {
     position: relative;
     width: calc(80% - 250px);
@@ -137,12 +144,14 @@ td {
     /* background-color: tomato; */
 }
 
-/* Not yet needed. */
+/* Copyright footer formatting, for the site's main copyright footer. */
+/* Not yet needed, no adjustments from the base .footer class' style needed at this time. */
 /* #copyright {
 
 } */
 
-/* Validation footer formatting */
+/* Validation footer formatting, for the navbar's validation image footer. */
+/* Provides style adjustments of the base .footer class' style. */
 #validation {
     position: fixed;
     width: 250px;
@@ -152,13 +161,14 @@ td {
     text-align: center;
 }
 
-/* Validation footer formatting for images. */
+/* Formatting for images within a validation footer, aka the W3C's validation images. */
+/* The pixel values here (88 and 31) are from W3C's site. */
 #validation img {
     width: 88px;
     height: 31px;
 }
 
-/* Set the formatting for links within the validation footer, aka the CSS / HTML checker images. */
+/* Formatting for links within a validation footer, aka the W3C validation images' alt text. */
 #validation a {
     margin-left: 0px;
     text-align: center;
@@ -166,16 +176,16 @@ td {
 
 /* PAGE SPECIFIC FORMATTING */
 /* ************************ */
+/* Classes and IDs that only appear on some pages. */
 
-/* TODO: Get these images working correctly. */
-/* Set the formatting for the external links images on the main page (ie GitHub, itch.io). */
+/* Formatting for the external links images on the main page (ie GitHub, itch.io). */
 #external_link_images img {
     margin: 25px;
     border: 0;
     height: 50px;
 }
 
-/* Styling for the image within the n-body and project spaceship banners.*/
+/* Styling for the image within the n-body and project spaceship banners. */
 #banner img {
     width: calc(80%); /* Similar to .page_main */
 }
@@ -188,18 +198,19 @@ td {
 
 /* GENERIC CONTAINERS */
 /* ****************** */
+/* These are useful for repeated use. */
 
-/* General /div class for holding center-justified images. */
+/* General div class for holding center-justified images. */
 .image_holder_center {
     text-align: center;
 }
 
-/* General /div class for holding left-justified images. */
+/* General div class for holding left-justified images. */
 .image_holder_left {
     text-align: left;
 }
 
-/* General /div class for holding right-justified images. */
+/* General div class for holding right-justified images. */
 .image_holder_right {
     text-align: right;
 }   
