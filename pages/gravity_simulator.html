@@ -45,7 +45,8 @@
                     <img src="../images/vcss-blue.gif" alt="Valid CSS!" />
                 </a>
                 <!-- HTML5 validation logo, from: https://github.com/bradleytaunt/html5-valid-badge since W3C doesn't offer one for HTML5. -->
-                <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmitbailey.github.io%2Fpages%2Fgravity_simulator.html">
+                <a
+                    href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmitbailey.github.io%2Fpages%2Fgravity_simulator.html">
                     <img src="../images/html5-validator-badge-blue.png" alt="Valid HTML!" />
                 </a>
             </p>
@@ -54,13 +55,14 @@
 
     <!-- The main page's 'body,' where most of the content will go. -->
     <div class="page_main">
-        <div class="image_holder_center" id="n-body_banner">
+        <div class="image_holder_center" id="banner">
             <a href=https://mitbailey.itch.io/n-body-gravity-simulator><img src="../images/n-body_banner.png"
                     alt="n-body Gravity Simulator" /></a>
         </div>
         <div class="written_section">
-            <p>This n-body gravity simulator is a project I released on 14 May 2020. It uses a simple algorithm which
-                utilizes Newton's Law of Universal Gravitation, calculating and applying the force between every object.
+            <p>This n-body gravity simulator is a project I released on 14 May 2020. It allows the user to spawn
+                particles with mass and velocity and uses a simple algorithm which implements Newton's Law of Universal
+                Gravitation, calculating and applying the gravitational forces between every object.
                 While this method results in an inefficient n(n-1) time complexity, it also presents the most accurate
                 result. Algorithms that would run the simulation faster, such as Barnes-Hut, use approximations which
                 decrease the accuracy of the simulation.</p>
@@ -105,7 +107,8 @@
                 <li><i><b>Speed of Light</b></i>. With the defining of a finite speed of light comes a plethora of
                     potential strange near-speed-of-light interactions and behaviors. Currently, however, the only
                     effect is the existence of the <a
-                        href=https://en.wikipedia.org/wiki/Schwarzschild_radius>Schwarzschild Radius</a></i>. This means
+                        href="https://en.wikipedia.org/wiki/Schwarzschild_radius">Schwarzschild Radius</a></i>. This
+                    means
                     that once a particle exceeds a certain mass, it will be spawned as a black hole. <i>Note: It is also
                         possible to force the spawning of a black hole of any mass via the object types drop-down
                         menu.</i></li>
@@ -125,9 +128,38 @@
                     be toggled (off by default).</li>
             </ul>
             <p></p>
+            <h3>Controls</h3>
+            <table>
+                <tr>
+                    <th>KEY</th>
+                    <th>ACTION</th>
+                </tr>
+                <tr>
+                    <td>WASD</td>
+                    <td>Scroll Camera</td>
+                </tr>
+                <tr>
+                    <td>Scroll Wheel</td>
+                    <td>Zoom In or Out</td>
+                </tr>
+                <tr>
+                    <td>Click</td>
+                    <td>Spawn Object</td>
+                </tr>
+                <tr>
+                    <td>Click and Drag</td>
+                    <td>Spawn Object with Velocity</td>
+                </tr>
+                <tr>
+                    <td>Escape</td>
+                    <td>Menu</td>
+                </tr>
+            </table>
         </div>
-        <div class="image_holder_center">
-
+        <div class="image_holder_center" id="screenshots">
+            <a href="../images/n-body-screen-1.png"><img src="../images/n-body-screen-1.png" /></a>
+            <a href="../images/n-body-screen-2.png"><img src="../images/n-body-screen-2.png" /></a>
+            <a href="../images/n-body-screen-3.png"><img src="../images/n-body-screen-3.png" /></a>
         </div>
     </div>
 

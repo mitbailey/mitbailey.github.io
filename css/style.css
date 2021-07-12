@@ -57,6 +57,24 @@ a {
     color: black;
 }
 
+/* Global formatting for tables. */
+table {
+    border: 1px solid black;
+    border-spacing: 0px;
+}
+
+/* Global formatting for table headers. */
+th {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+/* Global formatting for table data cells. */
+td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
 /* CLASS SPECIFIC FORMATTING */
 /* ************************* */
 
@@ -91,11 +109,12 @@ a {
 .page_main {
     position: relative; /* Allows offset relative to where it would have been. */
     width: calc(80% - 250px); /* 80% = 100% - margin%s */
-    min-height: calc(100vh - 50px - 50px); /* Sets the minimum height of the main page area to the height of the viewport. This will push the footer down. We subtract the 50 pixels of the top margin and 50 pixels of the footer. */
+    min-height: calc(100vh - 50px - 50px - 50px); /* Sets the minimum height of the main page area to the height of the viewport. This will push the footer down. We subtract the 50 pixels of the top margin, 50 pixels of the bottom margin, and 50 pixels of the footer. */
     left: 250px; /* Pushed from the left an amount of pixels equal to the navbar's width. */
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 50px;
+    margin-bottom: 50px;
     font-family: OpenSans;
 
     /* For debugging. */
@@ -148,17 +167,23 @@ a {
 /* PAGE SPECIFIC FORMATTING */
 /* ************************ */
 
-/* Styling for the image within the n-body banner on the gravity sim page. */
-#n-body_banner img {
-    width: calc(80%); /* Similar to .page_main */
-} 
-
 /* TODO: Get these images working correctly. */
 /* Set the formatting for the external links images on the main page (ie GitHub, itch.io). */
 #external_link_images img {
     margin: 25px;
     border: 0;
     height: 50px;
+}
+
+/* Styling for the image within the n-body and project spaceship banners.*/
+#banner img {
+    width: calc(80%); /* Similar to .page_main */
+}
+
+/* Styling for the screenshots on the n-body and project spaceship pages. */
+#screenshots img {
+    width: calc(30%);
+    margin-top: 25px;
 }
 
 /* GENERIC CONTAINERS */

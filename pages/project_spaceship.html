@@ -45,7 +45,8 @@
                     <img src="../images/vcss-blue.gif" alt="Valid CSS!" />
                 </a>
                 <!-- HTML5 validation logo, from: https://github.com/bradleytaunt/html5-valid-badge since W3C doesn't offer one for HTML5. -->
-                <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmitbailey.github.io%2Fpages%2Fproject_spaceship.html">
+                <a
+                    href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmitbailey.github.io%2Fpages%2Fproject_spaceship.html">
                     <img src="../images/html5-validator-badge-blue.png" alt="Valid HTML!" />
                 </a>
             </p>
@@ -54,7 +55,71 @@
 
     <!-- The main page's 'body,' where most of the content will go. -->
     <div class="page_main">
-
+        <div class="image_holder_center" id="banner">
+            <a href="https://mitbailey.itch.io/project-spaceship"><img src="../images/project_spaceship_banner.png"
+                    alt="Project Spaceship"></a>
+        </div>
+        <div class="written_section">
+            <p>Project Spaceship is an arcade-style game where the player controls a single blue spaceship and attempts
+                to survive waves of enemy spacecraft. Similar to the well-known Asteroids, the player can rotate and
+                fire their engines in a single direction, continuing to move as if in a frictionless vacuum. Enemies fly
+                in from the edges of the screen and are introduced in increasing numbers and difficulty each level. If
+                the player flies off the screen they reappear on the opposite side, while enemy ships will have to turn
+                around and fly back onto the screen. </p>
+            <p>Click on the banner image or the following link to view this program's itch.io page: <a
+                    href="https://mitbailey.itch.io/project-spaceship">Project Spaceship</a></p>
+            <h3>Features</h3>
+            <ul>
+                <li><i><b>Hull Strength and Shields</b></i>. The miniature player-ships and blue arcs symbols in
+                the top left corner represent the player-ship's hull strength and shields respectively. Shields will
+                regenerate slowly over time if not hit by enemy fire, however hull strength can never be regained. Hull
+                strength will not decrease until shields are disabled. The player-ship explodes if hull strength reaches
+                zero.</li>
+            </ul>
+            <ul>
+                <li><i><b>Newtonian Physics</b></i>. The game follows <a
+                    href="https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion#Newton's_first_law">Newton's first law
+                    of motion</a>. Since the only force exterted on the player-ship is that of the engines, it will
+                continue at a constant velocity until the engines are fired again. Enemy ships and all weapons-fire also follow this principle.</li>
+            </ul>
+            <ul>
+                <li><i><b>Endless Levels</b></i>. There are 20 unique levels of increasing difficulty. Beyond level 20
+                    no new enemy types are introduced, however the game continues to introduce an increasing number of
+                    enemies each level for an infinite number of levels.</li>
+            </ul>
+            <h3>Controls</h3>
+            <table>
+                <tr>
+                    <th>KEY</th>
+                    <th>ACTION</th>
+                </tr>
+                <tr>
+                    <td>W (or S)</td>
+                    <td>Fire Thrusters</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>Rotate Anti-Clockwise</td>
+                </tr>
+                <tr>
+                    <td>D</td>
+                    <td>Rotate Clockwise</td>
+                </tr>
+                <tr>
+                    <td>Spacebar</td>
+                    <td>Fire Weapons</td>
+                </tr>
+                <tr>
+                    <td>Escape</td>
+                    <td>Menu</td>
+                </tr>
+            </table>
+            <div class="image_holder_center" id="screenshots">
+                <a href="../images/project_spaceship_screenshot_1.png"><img src="../images/project_spaceship_screenshot_1.png" /></a>
+                <a href="../images/project_spaceship_screenshot_2.png"><img src="../images/project_spaceship_screenshot_2.png" /></a>
+                <a href="../images/project_spaceship_screenshot_3.png"><img src="../images/project_spaceship_screenshot_3.png" /></a>
+            </div>
+        </div>
     </div>
 
     <!-- The footer, which contains copyright information. -->
