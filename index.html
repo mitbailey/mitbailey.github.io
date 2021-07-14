@@ -18,86 +18,139 @@
 
 <!-- Boilerplate Information -->
 
+<!-- Bootstrap code from: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
+
 <head>
     <meta charset="utf-8">
+
+    <!-- Added for Bootstrap. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/bs-style.css">
+
     <title>mitbailey.com</title>
     <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="src/script.js"></script>
+
+    <!-- Removed for Bootstrap. -->
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <!-- <script src="../src/script.js"></script> -->
 </head>
 
 <!-- Page Content -->
 
 <body>
 
-    <!-- This is the site's side navigation bar (navbar). It is always present on the left side of the screen and provides links to all other pages on the site. -->
-    <div class="navbar">
-        <br>
 
-        <!-- The site's title, as part of the site_side_navigation class. -->
-        <h1 id="main_title">mitbailey.com</h1><br><br>
-        
-        <!-- The side navigation bar's links. -->
-        <a href="index.html">Home</a><br><br>
-        <a href="pages/gravity_simulator.html">Gravity Simulator</a><br><br>
-        <a href="pages/project_spaceship.html">Project Spaceship</a><br><br>
-        <a href="pages/project_paradigm.html">Project Paradigm</a><br><br>
-        <a href="pages/misc_projects.html">Misc. Projects</a><br><br>
-        <a href="pages/about_me.html">About Me</a><br><br>
+    <div class="container-fluid">
+        <!-- Main Page and Navbar -->
+        <div class="row">
+            <div class="col-3">
+                <nav class="nax flex-column">
+                    <div class="row-1 p-4 bg-light text-truncate">
+                        <h1>mitbailey.com</h1>
+                    </div>
+                    <div class="row-1">
+                        <a class="nav-link active" aria-current="index.html" href="#">Home</a>
+                    </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/gravity_simulator.html">Gravity Simulator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/project_spaceship.html">Project Spaceship</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/project_paradigm.html">Project Paradigm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/misc_projects.html">Misc. Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/about_me.html">About Me</a>
+                    </li>
+                </nav>
+            </div>
 
-        <!-- The footer of the navbar, contains the W3C validation image links. -->
-        <div class="footer" id="validation">
-            <p>
-                <!-- CSS Validation Icon -->
-                <a href="https://jigsaw.w3.org/css-validator/check/referer">
-                    <img src="images/vcss-blue.gif" alt="Valid CSS!" />
-                </a>
-                <!-- HTML5 Validation Icon -->
-                <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmitbailey.github.io%2F">
-                    <img src="images/html5-validator-badge-blue.png" alt="Valid HTML!" />
-                </a>
-            </p>
+
+            <!-- Main Page -->
+            <div class="col-9 p-5">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi elementum neque vitae ipsum
+                    pellentesque,
+                    vel ornare dolor consequat. In nec accumsan massa. Nam vulputate gravida volutpat. Cras vitae ex
+                    dictum
+                    lectus lacinia commodo ut id neque. Nullam quis sem mi. Suspendisse justo orci, feugiat et venenatis
+                    elementum, dictum non massa. Integer auctor congue sagittis. Nullam risus nisl, maximus at iaculis
+                    ac,
+                    condimentum feugiat magna. Donec quis vulputate nibh.</p>
+                <p>Fusce tincidunt consequat sapien, at aliquet ipsum malesuada non. Suspendisse luctus auctor elit,
+                    quis
+                    vestibulum urna tempor sed. Proin vehicula sodales urna quis ultricies. Ut vehicula hendrerit sapien
+                    sed
+                    mattis. Maecenas ullamcorper arcu et eros fermentum ultrices. Orci varius natoque penatibus et
+                    magnis
+                    dis parturient montes, nascetur ridiculus mus. Curabitur tincidunt convallis cursus. Morbi quis
+                    ipsum
+                    metus. Sed nec augue at tortor tincidunt placerat et sit amet leo. Curabitur eros dui, placerat
+                    aliquam
+                    tempor in, ullamcorper sed nisl. Morbi porttitor rutrum dignissim. In egestas odio vel massa
+                    pulvinar
+                    cursus. Integer posuere urna nec lectus commodo, id scelerisque orci varius. Donec quis eleifend
+                    ante.
+                    Praesent commodo est massa, eu commodo ipsum egestas sit amet. Praesent efficitur venenatis tellus
+                    vel
+                    volutpat.</p>
+                <p>Maecenas eget mollis tellus, vel pharetra neque. Quisque leo est, dapibus sit amet nisi vel, rhoncus
+                    pellentesque arcu. Pellentesque pretium sapien at felis feugiat, quis fringilla augue feugiat.
+                    Aenean
+                    nunc dui, tincidunt vitae dui ut, tristique ullamcorper ipsum. Pellentesque magna purus, sagittis
+                    sed
+                    ligula non, faucibus gravida dui. Maecenas facilisis ligula quis magna accumsan, non condimentum
+                    nulla
+                    molestie. Ut pharetra pharetra mi, at tempus tellus ultrices ac.</p>
+                <p>Morbi facilisis tempor lobortis. Phasellus molestie, ligula porttitor faucibus viverra, ligula magna
+                    ornare nunc, vel porttitor risus arcu in libero. Pellentesque volutpat elit vitae justo condimentum
+                    rhoncus. Integer a lorem sagittis, placerat velit nec, elementum odio. Quisque blandit nisi id nulla
+                    posuere aliquam. Nulla ullamcorper maximus ante eu vestibulum. In dictum ante eget libero interdum
+                    malesuada. Nam volutpat, dolor non consectetur commodo, mauris ipsum fringilla mi, sit amet egestas
+                    lorem augue id dolor. Morbi convallis, eros congue maximus commodo, neque nisi gravida turpis, ut
+                    semper
+                    nibh metus ut massa. Mauris at enim non mi tincidunt tempor sit amet in mi. Sed ultrices elementum
+                    nunc
+                    sed condimentum. Sed elementum sem ut elit venenatis aliquet. Praesent eget elit vel massa placerat
+                    dapibus.</p>
+                <p>Ut vitae tellus lectus. Duis finibus lectus non arcu condimentum ultricies. Vestibulum urna massa,
+                    pulvinar ac elementum sit amet, fringilla ac odio. Aliquam lorem ex, fringilla vitae condimentum
+                    fringilla, viverra sit amet ex. Praesent vehicula vulputate arcu vel rhoncus. Vestibulum ante ipsum
+                    primis in faucibus orci luctus et ultrices posuere cubilia curae; Quisque semper diam odio, eget
+                    aliquet
+                    justo eleifend ac. Sed a ipsum sed magna bibendum vestibulum. Fusce faucibus pellentesque justo quis
+                    gravida.</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="row">
+
         </div>
     </div>
 
-    <!-- The main page's 'body,' where most of the content will go. -->
-    <div class="page_main">
-
-        <!-- Trying out different types of text here. -->
-        <div class="written_section">
-            <p>Welcome to my personal programming projects website. Here you will find downloads and links to an
-                assortment of projects I've created that may be found interesting or useful.</p>
-            <p>This website is itself a programming project and is written in HTML/CSS. The code can be found in my <a
-                    href="https://github.com/mitbailey/mitbailey.github.io">mitbailey.github.io repository</a>.</p>
-            <p>Projects not hosted on this website directly can be found either on my GitHub or itch.io pages.</p>
+    <div class="container-fluid">
+        <!-- Footer -->
+        <div class="row justify-content-end">
+            This is basically a footer.
         </div>
-
-        <!-- image_holder_center is a class designed to hold images center-justified. See style.css for more information. -->
-        <div class="image_holder_center" id="external_link_images">
-            <a href="https://github.com/mitbailey"><img src="images/GitHub_Logo.png" alt="GitHub" /></a>
-            <a href="https://mitbailey.itch.io/"><img src="images/itchio-logo-black.png" alt="itch.io" /></a>
-        </div>
-
-        <!-- Trying out a button in a new section. -->
-        <div class="section2">
-            <button>This is a button?</button>
-        </div>
-
-        <!-- Testing IDs and the code tag. -->
-        <div id="special_section">
-            <code>
-                This is a lot of code. Probably not enough honestly, but who knows!<br>
-                Next line!<br>
-                Another!
-            </code>
-        </div>
-
     </div>
 
-    <!-- The main site footer, which contains copyright information. -->
-    <div class="footer" id="copyright">
-        Mit Bailey Copyright (c) 2021
-    </div>
+
+
+
+    <!-- Added for Bootstrap. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
 </body>
 
 
