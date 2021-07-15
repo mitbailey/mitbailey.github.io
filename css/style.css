@@ -214,3 +214,85 @@ td {
 .image_holder_right {
     text-align: right;
 }   
+
+/* Attempting to account for mobile devices. */
+/* mydevice.io says my mobile devices are all greater than 2dppx, while my desktops and laptops are all less than 2dppx, so I figure this should be a good way to differentiate the two. */
+/* May also need a portrait vs landscape detector. */
+@media (min-resolution: 2dppx) {
+    body {
+        background-color: beige;
+    }
+
+    /* Formatting for the site's side-bar navigation. */
+    .navbar {
+        width: 70%; /* Defines a constant width. */
+        font-size: 45pt;
+    }
+
+    /* Formatting for the side bar's title, aka the site title. */
+    .navbar h1 {
+        font-size: 65pt;
+    }
+
+    /* By making a main page class we can push everything over a bit, to account for the side bar. */
+    /* Allows adjusting of the "content" area of our pages, aka the body minus the footer and navbar. */
+    .page_main {
+        position: relative; /* Allows offset relative to where it would have been. */
+        width: 80%; /* 80% = 100% - margin%s */
+        min-height: calc(100vh - 50px - 50px - 50px); /* Sets the minimum height of the main page area to the height of the viewport. This will push the footer down. We subtract the 50 pixels of the top margin, 50 pixels of the bottom margin, and 50 pixels of the footer. Nonsimplified for verbosity. */
+        left: 0px; /* Pushed from the left an amount of pixels equal to the navbar's width. */
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-family: OpenSans;
+
+        /* For debugging. */
+        /* background-color: thistle; */
+    }
+
+    /* Validation footer formatting, for the navbar's validation image footer. */
+    /* Provides style adjustments of the base .footer class' style. */
+    #validation {
+        position: fixed;
+        width: 500px;
+        left: 0;
+        bottom: 50px;
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    /* Formatting for images within a validation footer, aka the W3C's validation images. */
+    /* The pixel values here (88 and 31) are from W3C's site. */
+    #validation img {
+        width: 176px;
+        height: 62px;
+    }
+
+    /* Formatting for links within a validation footer, aka the W3C validation images' alt text. */
+    #validation a {
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    /* Custom div style footer, used for the validation images in the navbar and the site's main copyright footer. */
+    /* Decided to go with this since the base footer tag was not acting how I wished it would. */
+    .footer {
+        position: relative;
+        width: calc(80% - 250px);
+        height: 50px;
+        left: 250px;
+        margin-left: 10%;
+        text-align: right;
+        font-family: NewsGothic-Cond; /* Sets the typeface. */
+        font-size: 20pt; /* Set the font. */
+        font-weight: normal;
+
+        /* For debugging. */
+        /* background-color: tomato; */
+    }
+
+    .collapse:checked + .navbar {
+        height: 0px;
+    }
+}
