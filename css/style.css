@@ -91,6 +91,7 @@ td {
     background-color: white;
     width: 250px; /* Defines a constant width. */
     /* font-size: 13pt; */
+    font-size: 1.1rem;
     position: fixed; /* Forces a constant position on-screen. */
     top: 0px; /* Ensures there is no space left at the top. */
 }
@@ -109,6 +110,7 @@ td {
     font-family: NewsGothic-Cond;
     font-weight: normal; /* This font actually only supports two variations, lighter-normal and bold-bolder. */
     /* font-size: 22pt; */
+    font-size: 2rem;
 }
 
 /* Button to collapse the navbar. We don't display it unless we're on mobile, where this is a required function. */
