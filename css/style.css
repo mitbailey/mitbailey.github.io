@@ -114,7 +114,7 @@ td {
 /* Button to collapse the navbar. We don't display it unless we're on mobile, where this is a required function. */
 #collapse_navbar {
     position: relative;
-    z-index: 10;
+    z-index: -10;
     display: none;
 }
 
@@ -237,6 +237,7 @@ td {
 
     /* Button to collapse the navbar. We don't display it unless we're on mobile, where this is a required function. */
     #collapse_navbar {
+        z-index: 10;
         display: initial;
     }
 
