@@ -89,7 +89,8 @@ td {
     z-index: 5; /* This will bring the bar to the front. */
     height: 100%; /* Extends this section the height of the screen. */
     background-color: white;
-    width: 250px; /* Defines a constant width. */
+    /* width: 250px; */ /* Defines a constant width. */
+    width: 15.625rem;
     /* font-size: 13pt; */
     font-size: 1.1rem;
     position: fixed; /* Forces a constant position on-screen. */
