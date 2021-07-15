@@ -23,21 +23,20 @@
     <title>mitbailey.com</title>
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
-    <script src="src/script.js"></script>
 </head>
 
 <!-- Page Content -->
 
 <body>
 
+    <button type="button" onclick="collapseNavbar()" id="collapse_navbar">Toggle Navbar</button>
+
     <!-- This is the site's side navigation bar (navbar). It is always present on the left side of the screen and provides links to all other pages on the site. -->
-    <div class="navbar">
+    <div class="navbar" id="side_navbar">
         <br>
 
         <!-- The site's title, as part of the site_side_navigation class. -->
         <h1 id="main_title">mitbailey.com</h1><br><br>
-        
-        <input type="checkbox" class="collapse">
 
         <!-- The side navigation bar's links. -->
         <a href="index.html">Home</a><br><br>
@@ -85,6 +84,8 @@
     <div class="footer" id="copyright">
         Mit Bailey Copyright (c) 2021
     </div>
+
+    <script src="src/script.js"></script>
 </body>
 
 

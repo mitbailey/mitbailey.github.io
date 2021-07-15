@@ -85,7 +85,8 @@ td {
 
 /* Formatting for the site's side-bar navigation. */
 .navbar {
-    z-index: 10; /* This will bring the bar to the front. */
+    visibility: visible; /* Visible by default. */
+    z-index: 5; /* This will bring the bar to the front. */
     height: 100%; /* Extends this section the height of the screen. */
     background-color: white;
     width: 250px; /* Defines a constant width. */
@@ -108,6 +109,13 @@ td {
     font-family: NewsGothic-Cond;
     font-weight: normal; /* This font actually only supports two variations, lighter-normal and bold-bolder. */
     font-size: 22pt;
+}
+
+/* Button to collapse the navbar. We don't display it unless we're on mobile, where this is a required function. */
+#collapse_navbar {
+    position: relative;
+    z-index: 10;
+    display: none;
 }
 
 /* By making a main page class we can push everything over a bit, to account for the side bar. */
@@ -216,22 +224,20 @@ td {
 }   
 
 /* Attempting to account for mobile devices. */
-/* mydevice.io says my mobile devices are all greater than 2dppx, while my desktops and laptops are all less than 2dppx, so I figure this should be a good way to differentiate the two. */
-/* May also need a portrait vs landscape detector. */
-@media (min-resolution: 2dppx) {
+/* @media (min-resolution: 2dppx) { */
+@media screen and (max-width: 1280px) {
     body {
         background-color: beige;
     }
 
-    /* Formatting for the site's side-bar navigation. */
+    /* Automatically hides the navbar. */
     .navbar {
-        width: 70%; /* Defines a constant width. */
-        font-size: 45pt;
+        visibility: hidden;
     }
 
-    /* Formatting for the side bar's title, aka the site title. */
-    .navbar h1 {
-        font-size: 65pt;
+    /* Button to collapse the navbar. We don't display it unless we're on mobile, where this is a required function. */
+    #collapse_navbar {
+        display: initial;
     }
 
     /* By making a main page class we can push everything over a bit, to account for the side bar. */
@@ -249,50 +255,5 @@ td {
 
         /* For debugging. */
         /* background-color: thistle; */
-    }
-
-    /* Validation footer formatting, for the navbar's validation image footer. */
-    /* Provides style adjustments of the base .footer class' style. */
-    #validation {
-        position: fixed;
-        width: 500px;
-        left: 0;
-        bottom: 50px;
-        margin-left: 0px;
-        text-align: center;
-    }
-
-    /* Formatting for images within a validation footer, aka the W3C's validation images. */
-    /* The pixel values here (88 and 31) are from W3C's site. */
-    #validation img {
-        width: 176px;
-        height: 62px;
-    }
-
-    /* Formatting for links within a validation footer, aka the W3C validation images' alt text. */
-    #validation a {
-        margin-left: 0px;
-        text-align: center;
-    }
-
-    /* Custom div style footer, used for the validation images in the navbar and the site's main copyright footer. */
-    /* Decided to go with this since the base footer tag was not acting how I wished it would. */
-    .footer {
-        position: relative;
-        width: calc(80% - 250px);
-        height: 50px;
-        left: 250px;
-        margin-left: 10%;
-        text-align: right;
-        font-family: NewsGothic-Cond; /* Sets the typeface. */
-        font-size: 20pt; /* Set the font. */
-        font-weight: normal;
-
-        /* For debugging. */
-        /* background-color: tomato; */
-    }
-
-    .collapse:checked + .navbar {
-        height: 0px;
     }
 }
