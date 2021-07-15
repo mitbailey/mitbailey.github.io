@@ -163,7 +163,7 @@ td {
 #validation {
     position: fixed;
     width: 250px;
-    left: 0;
+    left: 0px;
     bottom: 10px;
     margin-left: 0px;
     text-align: center;
@@ -189,7 +189,7 @@ td {
 /* Formatting for the external links images on the main page (ie GitHub, itch.io). */
 #external_link_images img {
     margin: 25px;
-    border: 0;
+    border: 0px;
     height: 50px;
 }
 
@@ -233,6 +233,7 @@ td {
     /* Automatically hides the navbar. */
     .navbar {
         visibility: hidden;
+        min-width: 250px;
     }
 
     /* Button to collapse the navbar. We don't display it unless we're on mobile, where this is a required function. */
