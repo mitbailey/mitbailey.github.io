@@ -13,6 +13,12 @@
 
 <!-- Basic code block borrowed from: https://www.sitepoint.com/a-minimal-html-document-html5-edition/ -->
 
+<!-- TODO: Copy the fixes made here to the other pages, this include... -->
+<!-- meta name viewport width=device width -->
+<!-- button type button onclick collapseNavbar -->
+<!-- id=side_navbar -->
+<!-- script src @ bottom of page -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,23 +26,25 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>mitbailey.com</title>
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
-    <script src="src/script.js"></script>
 </head>
 
 <!-- Page Content -->
 
 <body>
 
+    <button type="button" onclick="collapseNavbar()" id="collapse_navbar">Toggle Navbar</button>
+
     <!-- This is the site's side navigation bar (navbar). It is always present on the left side of the screen and provides links to all other pages on the site. -->
-    <div class="navbar">
+    <div class="navbar" id="side_navbar">
         <br>
 
         <!-- The site's title, as part of the site_side_navigation class. -->
         <h1 id="main_title">mitbailey.com</h1><br><br>
-        
+
         <!-- The side navigation bar's links. -->
         <a href="index.html">Home</a><br><br>
         <a href="pages/gravity_simulator.html">Gravity Simulator</a><br><br>
@@ -81,8 +89,10 @@
 
     <!-- The main site footer, which contains copyright information. -->
     <div class="footer" id="copyright">
-        Mit Bailey Copyright (c) 2021
+        Mit Bailey Copyright (c) 2021 v28
     </div>
+
+    <script src="src/script.js"></script>
 </body>
 
 

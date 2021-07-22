@@ -85,18 +85,20 @@ td {
 
 /* Formatting for the site's side-bar navigation. */
 .navbar {
-    z-index: 10; /* This will bring the bar to the front. */
+    visibility: visible; /* Visible by default. */
+    z-index: 5; /* This will bring the bar to the front. */
     height: 100%; /* Extends this section the height of the screen. */
     background-color: white;
-    width: 250px; /* Defines a constant width. */
-    font-size: 13pt;
+    /* width: 250px; */ /* Defines a constant width. */
+    width: 15.625rem;
+    font-size: 1.0625rem;
     position: fixed; /* Forces a constant position on-screen. */
     top: 0px; /* Ensures there is no space left at the top. */
 }
 
 /* Formatting for links in the side bar, aka the page names and links. */
 .navbar a {
-    margin-left: 50px;
+    margin-left: 3.125rem;
     font-family: OpenSans;
     text-decoration-line: none; /* Remove the links' underlines. */
 }
@@ -104,23 +106,31 @@ td {
 /* Formatting for the side bar's title, aka the site title. */
 .navbar h1 {
     justify-self: center;
-    margin-left: 50px;
+    margin-left: 3.125rem;
     font-family: NewsGothic-Cond;
     font-weight: normal; /* This font actually only supports two variations, lighter-normal and bold-bolder. */
-    font-size: 22pt;
+    /* font-size: 22pt; */
+    font-size: 2rem;
+}
+
+/* Button to collapse the navbar. We don't display it unless we're on mobile, where this is a required function. */
+#collapse_navbar {
+    position: relative;
+    z-index: -10;
+    display: none;
 }
 
 /* By making a main page class we can push everything over a bit, to account for the side bar. */
 /* Allows adjusting of the "content" area of our pages, aka the body minus the footer and navbar. */
 .page_main {
     position: relative; /* Allows offset relative to where it would have been. */
-    width: calc(80% - 250px); /* 80% = 100% - margin%s */
-    min-height: calc(100vh - 50px - 50px - 50px); /* Sets the minimum height of the main page area to the height of the viewport. This will push the footer down. We subtract the 50 pixels of the top margin, 50 pixels of the bottom margin, and 50 pixels of the footer. Nonsimplified for verbosity. */
-    left: 250px; /* Pushed from the left an amount of pixels equal to the navbar's width. */
+    width: calc(80% - 15.625rem); /* 80% = 100% - margin%s */
+    min-height: calc(100vh - 9.375rem); /* Sets the minimum height of the main page area to the height of the viewport. This will push the footer down. We subtract the 50 pixels of the top margin, 50 pixels of the bottom margin, and 50 pixels of the footer. */
+    left: 15.625rem; /* Pushed from the left an amount of pixels equal to the navbar's width. */
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 3.125rem;
+    margin-bottom: 3.125rem;
     font-family: OpenSans;
 
     /* For debugging. */
@@ -132,12 +142,12 @@ td {
 .footer {
     position: relative;
     width: calc(80% - 250px);
-    height: 50px;
-    left: 250px;
+    height: 3.125rem;
+    left: 15.625rem;
     margin-left: 10%;
     text-align: right;
     font-family: NewsGothic-Cond; /* Sets the typeface. */
-    font-size: 10pt; /* Set the font. */
+    font-size: 0.8125rem; /* Set the font. */
     font-weight: normal;
 
     /* For debugging. */
@@ -154,23 +164,23 @@ td {
 /* Provides style adjustments of the base .footer class' style. */
 #validation {
     position: fixed;
-    width: 250px;
+    width: 15.625rem;
     left: 0;
-    bottom: 10px;
-    margin-left: 0px;
+    bottom: 0.625rem;
+    margin-left: 0;
     text-align: center;
 }
 
 /* Formatting for images within a validation footer, aka the W3C's validation images. */
 /* The pixel values here (88 and 31) are from W3C's site. */
 #validation img {
-    width: 88px;
-    height: 31px;
+    width: 5.5rem;
+    height: 1.9375rem;
 }
 
 /* Formatting for links within a validation footer, aka the W3C validation images' alt text. */
 #validation a {
-    margin-left: 0px;
+    margin-left: 0;
     text-align: center;
 }
 
@@ -180,9 +190,9 @@ td {
 
 /* Formatting for the external links images on the main page (ie GitHub, itch.io). */
 #external_link_images img {
-    margin: 25px;
+    margin: 1.5625rem;
     border: 0;
-    height: 50px;
+    height: 3.125rem;
 }
 
 /* Styling for the image within the n-body and project spaceship banners. */
@@ -193,7 +203,7 @@ td {
 /* Styling for the screenshots on the n-body and project spaceship pages. */
 #screenshots img {
     width: calc(30%);
-    margin-top: 25px;
+    margin-top: 1.5625rem;
 }
 
 /* GENERIC CONTAINERS */
@@ -214,3 +224,48 @@ td {
 .image_holder_right {
     text-align: right;
 }   
+
+/* Attempting to account for mobile devices. */
+/* @media (min-resolution: 2dppx) { */
+@media screen and (max-width: 80rem) {
+    body {
+        background-color: beige;
+    }
+
+    /* Automatically hides the navbar. */
+    .navbar {
+        visibility: hidden;
+        /* min-width: 250px; */
+    }
+
+    /* Button to collapse the navbar. We don't display it unless we're on mobile, where this is a required function. */
+    #collapse_navbar {
+        z-index: 10;
+        display: initial;
+    }
+
+    /* By making a main page class we can push everything over a bit, to account for the side bar. */
+    /* Allows adjusting of the "content" area of our pages, aka the body minus the footer and navbar. */
+    .page_main {
+        position: relative; /* Allows offset relative to where it would have been. */
+        width: 80%; /* 80% = 100% - margin%s */
+        min-height: calc(100vh - 9.375rem); /* Sets the minimum height of the main page area to the height of the viewport. This will push the footer down. We subtract the 50 pixels of the top margin, 50 pixels of the bottom margin, and 50 pixels of the footer. Nonsimplified for verbosity. */
+        left: 0; /* Pushed from the left an amount of pixels equal to the navbar's width. */
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 3.125rem;
+        margin-bottom: 3.125rem;
+        font-family: OpenSans;
+
+        /* For debugging. */
+        /* background-color: thistle; */
+    }
+}
+
+@media (min-resolution: 2dppx) {
+    body {
+        background-color: darkorchid;
+    }
+
+
+}
