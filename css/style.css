@@ -103,6 +103,15 @@ td {
     text-decoration-line: none; /* Remove the links' underlines. */
 }
 
+.navbar a#current {
+    background: black;
+    color: white;
+    font-weight: bold;
+    margin-left: 2.875rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+}
+
 /* Formatting for the side bar's title, aka the site title. */
 .navbar h1 {
     justify-self: center;
@@ -240,8 +249,19 @@ td {
 
     /* Button to collapse the navbar. We don't display it unless we're on mobile, where this is a required function. */
     #collapse_navbar {
+        position: fixed;
         z-index: 10;
         display: initial;
+        background-color: rgb(0,0,0,0);
+        border-style: none;
+        top: 0.3rem;
+        left: 0.15rem;
+    }
+
+    /* The image in the button. */
+    #collapse_navbar img {
+        height: 1.592rem;
+        width: 2rem;
     }
 
     /* By making a main page class we can push everything over a bit, to account for the side bar. */
@@ -266,6 +286,4 @@ td {
     body {
         background-color: darkorchid;
     }
-
-
 }
