@@ -19,6 +19,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>mitbailey.com</title>
     <link rel="shortcut icon" href="../images/favicon.ico">
     <link rel="stylesheet" href="../css/style.css">
@@ -29,8 +30,12 @@
 
 <body>
 
+    <button type="button" onclick="collapseNavbar()" id="collapse_navbar">
+        <img src="images/meb_tribar.png" alt="Toggle Sidebar" />
+    </button>
+
     <!-- This is the site's side navigation bar (navbar). It is always present on the left side of the screen and provides links to all other pages on the site. -->
-    <div class="navbar">
+    <div class="navbar" id="side_navbar">
         <br>
 
         <!-- The site's title, as part of the site_side_navigation class. -->
@@ -191,6 +196,8 @@
     <div class="footer" id="copyright">
         Mit Bailey Copyright (c) 2021
     </div>
+
+    <script src="src/script.js"></script>
 </body>
 
 
