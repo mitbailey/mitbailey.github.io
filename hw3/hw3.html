@@ -1,0 +1,139 @@
+<!-- 
+    @file about_me.html
+    @author Mit Bailey (mitbailey99@gmail.com)
+    @brief GUI Assignment 1: Creating Your First Webpage
+    @version 0.1
+    @date 2021.07.07
+
+    For homework Assignment 3.
+
+    @copyright Copyright (c) 2021
+ -->
+
+<!-- Basic code block borrowed from: https://www.sitepoint.com/a-minimal-html-document-html5-edition/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Boilerplate Information -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mitbailey.com</title>
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../src/script.js"></script>
+</head>
+
+<!-- Page Content -->
+
+<body>
+
+    <button type="button" onclick="collapseNavbar()" id="collapse_navbar">
+        <img src="../images/meb_tribar.png" alt="Toggle Sidebar" />
+    </button>
+
+    <!-- This is the site's side navigation bar (navbar). It is always present on the left side of the screen and provides links to all other pages on the site. -->
+    <div class="navbar" id="side_navbar">
+        <br>
+
+        <!-- The site's title, as part of the site_side_navigation class. -->
+        <h1 id="main_title">mitbailey.com</h1><br><br>
+
+        <!-- The side navigation bar's links. -->
+        <a href="../index.html">Home</a><br><br>
+        <a href="../pages/gravity_simulator.html">Gravity Simulator</a><br><br>
+        <a href="../pages/project_spaceship.html">Project Spaceship</a><br><br>
+        <a href="../pages/project_paradigm.html">Project Paradigm</a><br><br>
+        <a href="../pages/misc_projects.html">Misc. Projects</a><br><br>
+        <a href="../pages/about_me.html">About Me</a><br><br>
+
+        <!-- The footer of the navbar, contains the W3C validation image links. -->
+        <div class="footer" id="validation">
+            <p>
+                <!-- W3C's CSS Validation Icon -->
+                <a href="https://jigsaw.w3.org/css-validator/check/referer">
+                    <img src="../images/vcss-blue.gif" alt="Valid CSS!" />
+                </a>
+                <!-- HTML5 validation logo, from: https://github.com/bradleytaunt/html5-valid-badge since W3C doesn't offer one for HTML5. -->
+                <a
+                    href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmitbailey.github.io%2Fhw3%2Fhw3.html">
+                    <img src="../images/html5-validator-badge-blue.png" alt="Valid HTML!" />
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <!-- The main page's 'body,' where most of the content will go. -->
+    <div class="page_main">
+
+        <!-- A set of forms where the user will enter four numbers. -->
+        <div class="dynamic-table-form-set">
+
+            <!-- Each form acts like a column. -->
+            <form class="dynamic-table-form">
+
+                <!-- Label for the input box. -->
+                <label for="val1">Start (x-axis):</label><br>
+
+                <!-- The input box itself. -->
+                <input type="number" id="val1"><br>
+
+                <!-- An area to programmatically display an error message, or user input. -->
+                <code id="val1text"></code><br>
+            </form>
+
+            <!-- Same as above form. -->
+            <form class="dynamic-table-form">
+                <label for="val2">End (x-axis):</label><br>
+                <input type="number" id="val2"><br>
+                <code id="val2text"></code><br>
+            </form>
+
+            <form class="dynamic-table-form">
+                <label for="val3">Start (y-axis):</label><br>
+                <input type="number" id="val3"><br>
+                <code id="val3text"></code><br>
+            </form>
+
+            <form class="dynamic-table-form">
+                <label for="val4">End (y-axis):</label><br>
+                <input type="number" id="val4"><br>
+                <code id="val4text"></code><br>
+            </form>
+
+            <div id="form-button-holder">
+                <!-- A button which calls submitFormValues(), to populate the table. -->
+                <button type="button" onclick="submitFormValues()" class="form-button" id="submit-form">
+                    SUBMIT
+                </button>
+
+                <!-- A button which calls clearTable(), for clearing the table. -->
+                <button type="button" onclick="clearTable()" class="form-button" id="clear-table">
+                    CLEAR
+                </button>
+            </div>
+        </div>
+
+        <!-- Multiple divs help with CSS formatting. -->
+        <div class="dynamic-table-holder">
+            <div class="dynamic-table">
+                <!-- An empty table object which will be manipulated by the JS code. -->
+                <table id="mult-table"></table>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- The main site footer, which contains copyright information. -->
+    <div class="footer" id="copyright">
+        Mit Bailey Copyright (c) 2021
+    </div>
+
+    <script src="../src/script.js"></script>
+</body>
+
+
+
+</html>
