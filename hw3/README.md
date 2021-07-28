@@ -18,6 +18,12 @@ The dynamic table is not constrained in the vertical direction, since the page i
 
 CSS styling for Assignment 3 begins under the 'PAGE SPECIFIC FORMATTING' section, and is labeled 'ASSIGNMENT 3'.  
 
+CSS:  
+https://github.com/mitbailey/mitbailey.github.io/blob/master/css/style.css
+
+JavaScript:  
+https://github.com/mitbailey/mitbailey.github.io/blob/master/src/script.js
+
 ### Error Handling
 Value Invalid  
 If the value is text or NULL, an error message, "Invalid value!," will appear under the offending box(es).  
