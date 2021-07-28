@@ -25,3 +25,11 @@ If the value is text or NULL, an error message, "Invalid value!," will appear un
 Value Out of Bounds  
 If the value is too large or small, it is clamped to a maximum of 64 or a minimum of -64.  
 
+Positive & Negative  
+Values can be either positive or negative.  
+
+Table Too Large  
+The table always fits within the main area of the page. The user is presented with scrollbars to navigate the table when necessary.  
+
+Axis Ordering  
+Axes can be ordered from greatest to least or least to greatest, it works either way.  
