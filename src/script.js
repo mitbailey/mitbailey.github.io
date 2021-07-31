@@ -45,21 +45,30 @@ function submitFormValues() {
         // Null value.
         if (values[i] == "") {
             console.log("Null value!");
+            text_outputs[i].style.color = "red";
+            text_outputs[i].style.fontWeight = "bold";
             text_outputs[i].textContent = "Invalid value!";
             fatal_error = true;
         }
         else { // Check bounds, clamp if necessary.
             if (values[i] > 64) {
+                text_outputs[i].style.color = "orange";
+                text_outputs[i].style.fontWeight = "bold";
                 console.log("Value too large, clamping.");
                 values[i] = 64;
+                text_outputs[i].textContent = values[i] + " (clamped)";
             }
             else if (values[i] < -64) {
+                text_outputs[i].style.color = "orange";
+                text_outputs[i].style.fontWeight = "bold";
                 console.log("Value too small, clamping.");
                 values[i] = -64;
+                text_outputs[i].textContent = values[i] + " (clamped)";
             }
-
-            // Set the text outputs to the adjusted values.
-            text_outputs[i].textContent = values[i];
+            else {
+                text_outputs[i].style.color = "black";
+                text_outputs[i].textContent = values[i];
+            }
         }
     }
 
