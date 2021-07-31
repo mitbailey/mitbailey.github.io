@@ -14,7 +14,7 @@ https://mitbailey.github.io/hw3/hw3.html
 
 The simple example found in requirement 10 under the "What You Are To Do" section was not viewed. 
   
-The dynamic table is not constrained in the vertical direction, since the page itself can be scrolled to view data infinitely in the vertical direction.  
+The headers use "position: sticky;" styling to stay visible when scrolling.   
 
 CSS styling for Assignment 3 begins under the 'PAGE SPECIFIC FORMATTING' section, and is labeled 'ASSIGNMENT 3'.  
 

@@ -247,11 +247,13 @@ td {
     border-style: ridge;
 }
 
+/* When hovering over the buttons. */
 .form-button:hover {
     background-color: #004F98;
     color: white;
 }
 
+/* When clicking the buttons. */
 .form-button:active {
     border-radius: 1.5rem;
 }
@@ -278,7 +280,7 @@ td {
     /* Sets max width to that of the page-main class, forcing scrolling. */
     /* The page itself should be scrolled to view the vertical data. */
     max-width: 100%;
-    /* max-height: 50rem; */
+    max-height: 50rem;
 
     background-color: white;
 }
@@ -291,6 +293,10 @@ td {
 
 /* Styling for table header cells. */
 .dynamic-table th {
+    /* Keeps the headers from disappearing on scroll. */
+    position: sticky;
+    top: 0;
+    left: 0;
     background-color: #051B34;
     color: white;
     border-style: solid;
