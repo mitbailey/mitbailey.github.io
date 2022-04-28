@@ -1,11 +1,9 @@
 /* 
     @file style.css
     @author Mit Bailey (mitbailey99@gmail.com)
-    @brief GUI Assignment 1: Creating Your First Webpage
+    @brief Contains the styling for the website.
 
-    CSS style file.
-
-    @version 0.1
+    @version See Git tags for version information.
     @date 2021.07.07
     @copyright Copyright (c) 2021
 */
@@ -212,8 +210,6 @@ td {
     margin-top: 1.5625rem;
 }
 
-/* ASSIGNMENT 3 */
-
 /* Styling for the Dynamic Table form set div. */
 .dynamic-table-form-set {
     /* Centers the forms within the set. */
@@ -224,7 +220,7 @@ td {
     padding: 1rem;
 }
 
-/* Styling for Assignment 3's Dynamic Table Form */
+/* Styling for Dynamic Table Form */
 .dynamic-table-form {
     /* Allows side-by-side display. */
     display: inline-block;
@@ -258,7 +254,7 @@ td {
     border-radius: 1.5rem;
 }
 
-/* Styling for the parent div of Assignment 3's Dynamic Table containing div. */
+/* Styling for the parent div of Dynamic Table containing div. */
 .dynamic-table-holder {
     /* Allows the centering of the .dynamic-table, because its inline-block. */
     text-align: center;
@@ -266,7 +262,7 @@ td {
     padding-top: 2rem;
 }
 
-/* Styling for Assignment 3's Dynamic Table containing div. */
+/* Styling for Dynamic Table containing div. */
 .dynamic-table {
     /* Prevents the div from spanning the entire page. */
     display: inline-block;
@@ -285,7 +281,7 @@ td {
     background-color: white;
 }
 
-/* Styling for Assignment 3's Dynamic Table itself. */
+/* Styling for Dynamic Table itself. */
 #mult-table {
     /* Centers the table. */
     margin: auto;
